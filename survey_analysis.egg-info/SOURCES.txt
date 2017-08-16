@@ -1,7 +1,0 @@
-setup.py
-survey_analysis/__init__.py
-survey_analysis.egg-info/PKG-INFO
-survey_analysis.egg-info/SOURCES.txt
-survey_analysis.egg-info/dependency_links.txt
-survey_analysis.egg-info/not-zip-safe
-survey_analysis.egg-info/top_level.txt
