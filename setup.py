@@ -1,12 +1,16 @@
-import os
-from setuptools import setup
+try:
+	from setuptools import setup
+except ImportError:
+	from disutils.core import setup
+package = 'pysurvey_analysis'
+version = '1.0'
 
-setup(version="0.1.0",
-	name="survey_analysis",
+setup(version=version,
+	name=package,
 	description='Survey Statistics',
 	url='http://github.com/anGie44/survey_analysis',
 	author='anGie44',
 	author_email='angelinepinilla@gmail.com',
 	license='',
-	packages=['survey_analysis'],
-	zip_safe=False)
+	packages=['pysurvey_analysis'],
+	scripts=['pysurvey_analysis/surveyAnalysis.py'])
