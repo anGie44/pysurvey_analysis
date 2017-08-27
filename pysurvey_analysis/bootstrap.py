@@ -1,3 +1,7 @@
+import numpy as np
+import pandas as pd
+from scipy.stats import hmean
+
 ''' Inputs:
 	psu: ndarray
 	replicates: integer
@@ -48,7 +52,7 @@ def bootweights(strata, psu, replicates=50, fpc=None, fpctype=["population", "fr
 			weights[np.where(stratum)[0], :] = bootstratum(upsu[np.where(stratum)[0]], curr_fpc, replicates)
 
 	
-	psu_per_strata = scipy.stats.hmean(pd.Series(ustrata).value_counts(sort=False))
+	psu_per_strata = hmean(pd.Series(ustrata).value_counts(sort=False))
 	rw = None
 	if compress:
 		rw = {'weights':weights, 'index':index}
